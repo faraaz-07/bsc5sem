@@ -26,7 +26,7 @@ public class week4q3{
             System.out.println(" ");
         }
     }
-//  matrix addition
+//  matrix multiplication
     public static void multiply(int a[][],int b[][],int c[][],int m1,int n2,int m2)
     {
         int sum=0;
