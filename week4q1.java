@@ -13,7 +13,7 @@ import java.util.*;
         }
         return n;
     }
-    // printing elements int he array
+    // printing elements in the array
     public static void output(int a[],int n)
     {
         for(int i=0;i<n;i++)
