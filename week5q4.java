@@ -38,6 +38,13 @@ class stack {
             return a[top];
     
         }
+    public static void diaplay()
+        {
+            for(int i=0;i<=top;i++)
+            {
+                System.out.print(a[i]+" | ");
+            }
+        }
         public static void main(String args[])
         {
 
@@ -48,8 +55,10 @@ class stack {
          push(30);
         System.out.println(peek());
         pop();
-        pop();
          System.out.println(peek());
+         pop();
+         System.out.println(peek());
+         diaplay();
         }
         
     }
