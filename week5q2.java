@@ -26,11 +26,11 @@ import java.util.*;
     }
     public static void transpose(int a[][],int t[][],int m,int n)
     {
-        for(int i=0;i<n;i++)
+        for(int i=0;i<m;i++)
         {
-            for(int j=0;j<m;j++)
+            for(int j=0;j<n;j++)
             {
-               t[i][j]=a[j][i];
+               t[j][i]=a[i][j];
            
         }
         }
