@@ -22,7 +22,7 @@ public class week4q5{
             
         }
     }
-// maximum elemnet
+// bubble sort
 public static void sort(int a[],int n)
 {
     int temp;
