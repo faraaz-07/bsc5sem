@@ -9,41 +9,43 @@ public class week5q1 {
             a[i]=sc.nextInt();
         }
     }
-    public static void merge(int a1[],int a2[],int n1,int n2,int c[])
+public static void merge(int a[],int b[],int c[],int n1,int n2)
     {
-        int s=0;int x=0;
-    for (int i=0;i<n1+n2;i++)
-    {
-        if(i%2!=0)
-        c[i]=a1[s++];
+        int i=0,j=0;
+            for(int k=0;k<(n1+n2);k++)
+            {
+                if(i!=n1&&j!=n2)
+        {
+                if(a[i]<b[j])
+                {
+                    c[k]=a[i];
+                    i++;
+                }
+                else 
+                {
+                    c[k]=b[j];
+                    j++;
+                }
+            }
         else
-        c[i]=a2[x++];
+        {
+         if(i==n1)
+         {
+            c[k]=b[j++];
+         }
+         else
+         {
+         c[k]=a[i++];
+         }
+        }
     }
-    }
-    public static void output(int a[],int n)
+}    public static void output(int a[],int n)
     {
         for(int i=0;i<n;i++)
         {
             System.out.print(a[i]+" ");
         }
     }
-    public static void sort(int a[],int n)
-{
-    int temp;
-    for(int i=0;i<n-1;i++)
-    {
-        for(int j=0;j<n-i-1;j++)
-        {
-       if(a[j]>a[j+1])
-       {
-        temp=a[j];
-        a[j]=a[j+1];
-        a[j+1]=temp;
-       }
-       
-        }
-    }
-}
     public static void main(String args[])
     {
     Scanner sc = new Scanner(System.in);
@@ -56,15 +58,12 @@ public class week5q1 {
     int n2 =sc.nextInt();
     input(a1,n1);
     input(a2,n2);
-    System.out.println("Array before merging.");
+    System.out.println("Array before merging.\n");
     output(a1,n1);
     System.out.println("");
     output(a2,n2);
-    merge(a1,a2,n1,n2,c);
-    System.out.println("\nArray after merging.");
-    output(c,n1+n2);
-    sort(c, n1+n2);
-    System.out.println("Array after sorting.");
+    merge(a1,a2,c,n1,n2);
+    System.out.println("\nArray after sorting.\n");
     output(c, n1+n2);
     
     }
