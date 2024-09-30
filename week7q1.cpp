@@ -21,7 +21,7 @@ int main() {
     }
 
     // Initialize largest and second largest
-    largest = secondLargest = a[0];  
+    largest = secondLargest = 0;  
 
     // Find the largest and second largest
     for (i = 0; i < n; i++) {
@@ -33,9 +33,6 @@ int main() {
         }
     }
 
-    if (secondLargest == a[0])
-        printf("No second largest element.\n");
-    else
         printf("The second largest element is %d\n", secondLargest);
 
     return 0;
